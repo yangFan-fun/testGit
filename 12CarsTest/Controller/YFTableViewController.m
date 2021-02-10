@@ -51,16 +51,11 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     YFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
     YFModel *model = self.dataList[indexPath.section];
     YFModelData *modelData = model.cars[indexPath.row];
-    
     cell.imageIcon.image = [UIImage imageNamed:modelData.icon];
-    
     cell.nameText.text = modelData.name;
-    
     return cell;
 }
 
